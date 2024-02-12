@@ -1,0 +1,6 @@
+<p>main-page works!</p>
+<app-characters-list></app-characters-list>
+@for (character of characters ; track character.id) {
+<span>{{ character.fullName }} {{ character.id }}</span>
+<br />
+}
