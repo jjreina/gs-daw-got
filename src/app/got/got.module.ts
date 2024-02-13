@@ -4,12 +4,14 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
 import { CharacterComponent } from './components/character/character.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FamilySelecterComponent } from './components/family-selecter/family-selecter.component';
 
 @NgModule({
   declarations: [
     MainPageComponent,
     CharactersListComponent,
     CharacterComponent,
+    FamilySelecterComponent,
   ],
   imports: [CommonModule, HttpClientModule],
   exports: [MainPageComponent],

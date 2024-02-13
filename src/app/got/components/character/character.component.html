@@ -1,1 +1,12 @@
-<p>character works!</p>
+<div class="card" style="width: 18rem">
+  <img
+    src="{{ character.imageUrl }}"
+    class="card-img-top card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <p><strong>Name: </strong> {{ character.fullName }}</p>
+    <p><strong>Family: </strong>{{ character.family }}</p>
+    <p><strong>Title: </strong>{{ character.title }}</p>
+  </div>
+</div>

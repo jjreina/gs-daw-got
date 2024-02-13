@@ -1,2 +1,5 @@
-<p>characters-list works!</p>
-<app-character></app-character>
+<div class="characters-container">
+  @for (character of this.characters; track character.id) {
+  <app-character [character]="character"></app-character>
+  }
+</div>

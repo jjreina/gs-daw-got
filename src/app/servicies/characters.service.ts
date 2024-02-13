@@ -21,4 +21,10 @@ export class CharactersService {
   public getAllCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>(this.url, this.options);
   }
+
+  public getCharacterByFamily(characters: Character[], family: string) {
+    return family === 'All House'
+      ? characters
+      : characters.filter((character) => character.family.includes(family));
+  }
 }

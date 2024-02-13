@@ -8,18 +8,27 @@ import { Character } from '../interfaces/character.interface';
   styleUrl: './main-page.component.css',
 })
 export class MainPageComponent implements OnInit {
-  public characters: Character[] = [];
+  public charactersAll: Character[] = [];
+  public charactersByFamily: Character[] = [];
+
   constructor(private charactersService: CharactersService) {}
   ngOnInit(): void {
     this.getAllCharacters();
-    console.log('Golaa' + this.characters);
   }
 
   private getAllCharacters() {
     this.charactersService
       .getAllCharacters()
       .subscribe((responese: Character[]) => {
-        this.characters = responese;
+        this.charactersAll = responese;
+        this.charactersByFamily = responese;
       });
+  }
+
+  public getCharacterByFamily(family: string) {
+    this.charactersByFamily = this.charactersService.getCharacterByFamily(
+      this.charactersAll,
+      family
+    );
   }
 }

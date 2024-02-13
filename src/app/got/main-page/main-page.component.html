@@ -1,6 +1,8 @@
-<p>main-page works!</p>
-<app-characters-list></app-characters-list>
-@for (character of characters ; track character.id) {
-<span>{{ character.fullName }} {{ character.id }}</span>
-<br />
-}
+<h1>Game Of Thrones</h1>
+<hr />
+<app-family-selecter
+  (familyEvent)="getCharacterByFamily($event)"
+></app-family-selecter>
+<app-characters-list
+  [characters]="this.charactersByFamily"
+></app-characters-list>
