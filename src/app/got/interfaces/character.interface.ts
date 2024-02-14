@@ -1,6 +1,8 @@
-/*export interface CharactersResponse {
+export interface CharactersResponse {
+  total_count: number;
+  info: string;
   data: Character[];
-}*/
+}
 
 export interface Character {
   id: number;

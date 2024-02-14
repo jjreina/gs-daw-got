@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../../servicies/characters.service';
-import { Character } from '../interfaces/character.interface';
+import {
+  Character,
+  CharactersResponse,
+} from '../interfaces/character.interface';
 
 @Component({
   selector: 'app-main-page',
@@ -19,9 +22,11 @@ export class MainPageComponent implements OnInit {
   private getAllCharacters() {
     this.charactersService
       .getAllCharacters()
-      .subscribe((responese: Character[]) => {
-        this.charactersAll = responese;
-        this.charactersByFamily = responese;
+      .subscribe((responese: CharactersResponse) => {
+        console.log(responese);
+
+        this.charactersAll = responese.data;
+        this.charactersByFamily = responese.data;
       });
   }
 
