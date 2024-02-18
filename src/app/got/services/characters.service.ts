@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import {
   Character,
   CharactersResponse,
-} from '../got/interfaces/character.interface';
+} from '../interfaces/character.interface';
 
 @Injectable({
   providedIn: 'root',
