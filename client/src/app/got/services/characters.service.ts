@@ -10,15 +10,7 @@ import {
   providedIn: 'root',
 })
 export class CharactersService {
-  /* private url: string = 'https://game-of-thrones1.p.rapidapi.com/Characters';
-  private options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '6185a78aa2mshb04ae8991085691p1d093bjsnae8623070f4a',
-      'X-RapidAPI-Host': 'game-of-thrones1.p.rapidapi.com',
-    },
-  };*/
-  private url: string = 'https://apimocha.com/jjreina/characters';
+  private url: string = 'http://localhost:3000/characters';
 
   constructor(public http: HttpClient) {}
 
