@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './main-page/main-page.component';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
 import { CharacterComponent } from './components/character/character.component';
-import { HttpClientModule } from '@angular/common/http';
 import { FamilySelecterComponent } from './components/family-selecter/family-selecter.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { FamilySelecterComponent } from './components/family-selecter/family-sel
     CharacterComponent,
     FamilySelecterComponent,
   ],
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule],
   exports: [MainPageComponent],
+  providers: [provideHttpClient()],
 })
 export class GotModule {}
